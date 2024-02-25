@@ -1,0 +1,28 @@
+<h2 class="text-center">Lesson List</h2>
+
+<div *ngIf="lessons.length > 0">
+  <table class="table table-striped text-center table-hover">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of lessons">
+        <td>{{ data.lessonId }}</td>
+        <td>{{ data.lessonName }}</td>
+        <td>{{ data.lessonDescription }}</td>
+        <td>{{ data.lessonStatus }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div>
+    <button (click)="previous()">Previous</button>
+    <span>{{ page + 1 }}</span>
+    <button (click)="next()">Next</button>
+  </div>
+</div>

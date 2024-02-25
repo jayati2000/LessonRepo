@@ -1,0 +1,48 @@
+<h1 class="text-center">
+    Add lesson
+</h1>
+<style>
+
+</style>
+<form (ngSubmit)="onSubmit()" #addForm = "ngForm">
+    <div class="container mt-12">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+
+                <div class="card">
+                    <div class="card-body">
+
+                        <div class="form-group">
+                            <div class="form-group">
+                                <!-- <b> Id :
+                                </b>
+                                <input type="number" class="form-control" id="lessonId" [(ngModel)]="lesson.lessonId"
+                                    name="lessonId"> -->
+                                <b> Name :
+                                </b>
+                                <input type="text" class="form-control" id="lessonName" [(ngModel)]="lesson.lessonName"
+                                    name="lessonName" required>
+                                <b> Description :
+                                </b>
+                                <input type="text" class="form-control" id="lessonDescription"
+                                    [(ngModel)]="lesson.lessonDescription" name="lessonDescription" required>
+                                <b> Status :
+                                </b>
+                                <select name="lessonStatus" id="lessonStatus" class="form-control" [(ngModel)]="lesson.lessonStatus" required>
+                                    <option value="Active">Active</option>
+                                    <option value="InActive">InActive</option>
+
+                                </select>
+                                
+                                <button class="btn btn-success ml-2 hello" [disabled]="addForm.invalid" type="submit">Submit</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</form>
